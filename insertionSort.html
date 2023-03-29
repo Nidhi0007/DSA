@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insersion Sort</title>
+    <script>
+
+        let arr = [12, 11, 13, 5, 6]
+
+
+        function insersionSort(data) {
+            let i, j, current;
+            for (i = 1; i < data.length; i++) {
+                j = i - 1
+                current = data[i]
+                while (j >= 0 && data[j] > current) {
+
+                    data[j + 1] = data[j]
+                    j = j - 1
+                }
+                data[j + 1] = current
+
+            }
+
+        }
+
+        insersionSort(arr)
+        console.log(arr)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

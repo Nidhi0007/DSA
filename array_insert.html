@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Insert </title>
+
+    <script>
+        let data = [2, 22, 222, 33, 333, 34, 343, 44]
+        let newEl = 70
+        let position = 2
+        for (let i = data.length - 1; i >= position; i--) {
+            data[i + 1] = data[i]
+
+            if (i === position) {
+
+                data[position] = newEl
+            }
+
+        }
+        data.splice(4,0,6000) //position, delete insert
+        console.log(data)
+
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let data = [3, 4, 5, 7, 8, 22]
+        let data1 = [4, 6, 7, 89, 99,101,191,222]
+        let data2 = []
+        let d1 = 0
+        let d2 = 0
+        let d3 = 0
+
+        while (d1 <= data.length && d2 <= data1.length) {
+            if (data[d1] <= data1[d2]) {
+                data2[d3] = data[d1]
+                d1++
+            } else {
+                data2[d3] = data1[d2]
+                d2++
+            }
+            d3++
+        }
+        console.log(data2)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

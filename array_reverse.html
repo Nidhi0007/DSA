@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse using recussion</title>
+    <script>
+        let array = [2, 3, 5, 7, 88]
+        // array.reverse()
+        let temp = 0
+        function reverseArr(array, first, last) {
+            console.log(array)
+          
+            if (first < last) {
+                temp = array[first]
+                array[first] = array[last]
+                array[last] = temp
+
+
+                reverseArr(array, first + 1, last - 1)
+
+            }
+
+        }
+        const result = reverseArr(array, 0, array.length - 1)
+        console.log(result)    
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

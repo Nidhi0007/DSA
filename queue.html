@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let queue = []
+        let currenySize = queue.length
+        let maxSize = 3
+        function enqueue(val) {
+            if (currenySize >= maxSize) {
+                alert("Queue is already full")
+            } else {
+                queue[currenySize] = val
+                currenySize++
+            }
+        }
+        function dequeue() {
+            if (currenySize == 0) {
+                alert("Queue is empty")
+            } else {
+                for (i = 0; i <= currenySize; i++) {
+                    queue[i] = queue[i + 1]
+
+                }
+                currenySize--
+                queue.length = currenySize
+            }
+
+        }
+
+        function display() {
+            console.log(queue)
+        }
+        function front() {
+            if (currenySize == 0) {
+                alert("Queue is empty")
+            } else {
+                console.log(queue[0])
+            }
+        }
+        function rare() {
+            if (currenySize == 0) {
+                alert("Queue is empty")
+            } else {
+                console.log(queue[queue.length - 1])
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

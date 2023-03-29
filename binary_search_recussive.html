@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = [1, 2, 3, 4, 5, 7, 8, 9, 11, 33, 44, 45] //sorted array
+        let search = 8
+        let start = 0
+        let end = arr.length - 1
+        let pos = undefined
+        function binarySearch(starting, searching, ending) {
+            let mid = Math.floor((starting + ending) / 2)
+            if (arr[mid] === searching) {
+                pos=mid
+            } else if (arr[mid] > searching) {
+               
+                binarySearch(starting, searching, mid-1)
+            } else {
+              
+                binarySearch(mid+1, searching, ending)
+            }
+        }
+
+        const find = binarySearch(start, search, end)
+        console.log(pos)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let money = 100
+        let apple = 0
+        // each apple costs 5rs
+        function buyApple(remainingMoney, seb) {
+            if (remainingMoney > 0) {
+                seb = seb + 1
+                remainingMoney = remainingMoney - 5
+                buyMore(remainingMoney, seb)
+                return seb
+            } else {
+                console.log("no sufficient balance")
+            }
+
+
+        }
+
+        function buyMore(remainingMoney, seb) {
+            console.log(remainingMoney, seb)
+            if (remainingMoney >= 5) {
+                buyApple(remainingMoney, seb)
+            } else {
+                console.log("no sufficient balance")
+            }
+        }
+        const result = buyMore(money, apple)
+        console.log(result)
+
+
+
+
+        //  interview question
+
+        function test(x) {
+            console.log(x)
+            if (x > 0) {
+                test(x - 1)
+            } else {
+                return x
+            }
+            console.log(x)
+
+        }
+
+// response
+        // 5
+        // 4
+        // 3
+        // 2
+        // 1
+        // 0
+        // 1
+        // 2
+        // 3
+        // 4
+        // 5
+
+// all the test function are push into the stack during execution context
+
+        const val = test(5)
+        console.log(val)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

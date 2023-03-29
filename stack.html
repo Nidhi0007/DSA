@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let stack = []
+        let currentSize = stack.length
+        let maxSize = 5
+        function push(newval) {
+            if (stack.length > maxSize) {
+                console.log("can not add more values")
+            } else {
+                stack[currentSize] = newval
+                currentSize = currentSize + 1
+            }
+        }
+ function pop(){
+    if(stack.length===0){
+        console.log("can not pop any more")
+    }else{
+        currentSize--
+        stack.length=currentSize
+    }
+ }
+        push(2)
+        push(23)
+        push(22)
+        push(221)
+        push(22)
+        pop()
+        pop()
+        pop()
+        pop()
+        pop()
+        pop()
+
+        console.log(stack)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
