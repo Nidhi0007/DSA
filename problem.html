@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find even values from array, and double it and find length of array manually</title>
+    <script>
+        let arr = [28, 1, 20, 3, 32, 5, 7, 9, 45, 34]
+        let evenArray = []
+        let length = 0
+        function solve(data) {
+            for (i = 0; i < data.length; i++) {
+                if (data[i] % 2 === 0) {
+                    evenArray.push(data[i]*2)
+                    length++
+                }
+            }
+        }
+        solve(arr)
+        console.log(evenArray)
+        console.log(length)
+    </script>
+</head>
+
+<body>
+    <h4>Find even values from array, and double it and find length of array manually</h4>
+  
+</body>
+
+</html>
