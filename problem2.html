@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximum occuring character in string</title>
+    <script>
+        let str = "maxx"
+        let msxChar = ''
+        function maxChar(str) {
+            let objStr1 = {}
+            for (ch of str) {
+                objStr1[ch] = (objStr1[ch] || 0) + 1
+               
+                if (msxChar == '' || objStr1[msxChar] < objStr1[ch]) {
+                    msxChar = ch
+                }
+            }
+
+            return msxChar
+        }
+        console.log(maxChar(str))
+    </script>
+</head>
+
+<body>
+    <h1>Maximum occuring character in string</h1>
+</body>
+
+</html>

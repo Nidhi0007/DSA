@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let data = {
+            name: "Nidhi",
+            age: 25,
+            surname: "Bhat",
+            sex: "Female"
+        }
+        // add value in object
+        data.status = "Single"
+
+        // delete value from object
+
+        delete data.age
+
+
+        // print all keys from object
+        for (i in data) {
+            console.log(i)
+        }
+
+        // print all values from object
+        for (i in data) {
+            console.log(data[i])
+        }
+
+
+        // get all keys in an array
+
+        console.log(Object.keys(data))
+
+        // get all values in an array
+        console.log(Object.values(data))
+
+        // get all key value pair in an array
+        console.log(Object.entries(data))
+
+        console.log(data)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
