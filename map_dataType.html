@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map data type</title>
+    <script>
+
+        let data = new Map([
+            ['name', 'anil'],
+            [true, 'yes'],
+            [100, 'hundred'],
+        ])
+        data.set('color', 'greaan')
+        console.log(data.has(100))
+        console.log(data.get(100))
+        data.delete('color')
+        console.log(data.has('color'))
+        for (x of data){
+            console.log(x[0])
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

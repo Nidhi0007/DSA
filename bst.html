@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Node {
+            constructor(val) {
+                this.value = val;
+                this.left = null
+                this.right = null
+            }
+
+        }
+        class BSTree {
+            constructor() {
+                this.root = null;
+            }
+            isTreeEmpty() {
+                return this.root === null
+            }
+            makeTree(val) {
+                let newNode = new Node(val)
+                if (this.root === null) {
+                    this.root = newNode;
+                } else {
+                    this.insertNode(this.root, newNode)
+                }
+            }
+            insertNode(root, newNode) {
+                if (root.value > newNode.value) {
+                    if (root.left === null) {
+                        root.left = newNode
+                    } else {
+                        this.insertNode(root.left, newNode)
+                    }
+                } else {
+                    if (root.right === null) {
+                        root.right = newNode
+                    } else {
+                        this.insertNode(root.right, newNode)
+                    }
+                }
+            }
+            search(root, val) {
+                if (root == null) {
+                    return false
+                } else if (root.value === val) {
+                    return true
+                } else if (root.value > val) {
+                    return this.search(root.left, val)
+                } else {
+                    return this.search(root.right, val)
+                }
+            }
+            preOrder(root) {
+                if (root) {
+                    console.warn(root.value);
+                    this.preOrder(root.left);
+                    this.preOrder(root.right);
+                }
+            }
+
+            inOrder(root) {
+                if (root) {
+                    this.inOrder(root.left);
+                    console.warn(root.value);
+                    this.inOrder(root.right);
+                }
+            }
+
+            postOrder(root) {
+                if (root) {
+                    this.postOrder(root.left);
+                    this.postOrder(root.right);
+                    console.warn(root.value);
+                }
+            }
+
+            bfsTraversing() {
+                let queue = [];
+                queue.push(this.root);
+                while (queue.length) {
+                    let current = queue.shift();
+                    if (current.left) {
+                        queue.push(current.left);
+                    }
+                    if (current.right) {
+                        queue.push(current.right);
+                    }
+                    console.warn(current.value);
+                }
+            }
+
+
+        }
+        let bst = new BSTree()
+        bst.makeTree(29)
+        bst.makeTree(39)
+        bst.makeTree(49)
+        bst.makeTree(32)
+        let check = bst.search(bst.root, 33)
+        console.log(check)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
