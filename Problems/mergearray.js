@@ -1,7 +1,7 @@
 let arr3 = []
 let d1 = 0
- let d2 = 0
-  let d3 = 0
+let d2 = 0
+let d3 = 0
 function mergeArray(arr1, arr2) {
     while (d1 <= arr1.length && d2 <= arr2.length) {
         if (arr1[d1] <= arr2[d2]) {
