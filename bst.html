@@ -57,14 +57,17 @@
                 }
             }
             preOrder(root) {
+                // root - left - right
                 if (root) {
                     console.warn(root.value);
                     this.preOrder(root.left);
                     this.preOrder(root.right);
                 }
             }
+            
 
             inOrder(root) {
+                   // left - root - right
                 if (root) {
                     this.inOrder(root.left);
                     console.warn(root.value);
@@ -74,6 +77,7 @@
 
             postOrder(root) {
                 if (root) {
+                       // left - right - root
                     this.postOrder(root.left);
                     this.postOrder(root.right);
                     console.warn(root.value);

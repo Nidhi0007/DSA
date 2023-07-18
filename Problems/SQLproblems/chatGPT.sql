@@ -187,3 +187,10 @@ LEFT JOIN majors m ON s.major_id = m.major_id;
 
 select sum(p.price*o.quantity) , o.order_id, os.customer_id as total from products p inner join order_items o on o.product_id=p.product_id 
 inner join orders os on os.order_id= o.order_id group by o.order_id;
+
+
+-- retrieve last 3 records from employee table
+SELECT * from (select * from employee order by empId desc limit 3) temp order by asc empId;
+
+
+
