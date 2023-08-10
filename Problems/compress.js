@@ -22,7 +22,7 @@ var compress = function (chars) {
         }
 
     }
-    return chars
+  
 };
 chars = ["a", "a", "b", "b", "c", "c", "c"]
 console.log(compress(chars))
